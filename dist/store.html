@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+<link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="./css/app.css">
+<!-- <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'> -->
+  </head>
+  <body>
+<nav id="nav">
+    <a class="logo">
+        <img src="../../img/cat.svg" alt="cat">
+        <p>System<br /><span>1.01v1</span></p>
+    </a>
+    <ul>
+        <li>食材管理</li>
+        <li>食譜管理</li>
+        <li>餐點管理</li>
+        <li>套餐管理</li>
+        <li><a href="store.html">店面管理</a></li>
+        <li>結帳管理</li>
+        <li>客戶資訊</li>
+        <li>系統設定</li>
+        <li>帳號與權限</li>
+        <li>Logout</li>
+    </ul>
+    <a class="info">
+        <p>{{userName}} 您好<br /><span>12:23PM</span></p>
+    </a>
+</nav>
+
+<section class="content ui three column grid">
+    <div class="column">
+        <div class="title">出機單設定
+            <div class="ui dropdown">
+                <div class="text">File</div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <div class="item">
+                        <i class="plus square icon"></i>
+                        新增廚房聯規則
+                    </div>
+                    <div class="item">
+                        <i class="plus square icon"></i>
+                        新增標籤貼紙規則
+                    </div>
+                    <div class="item">
+                        <i class="plus square icon"></i>
+                        新增客戶聯規則
+                    </div>
+                    <div class="divider"></div>
+                    <div class="item">
+                        <i class="edit icon"></i>
+                        編輯出單名稱
+                    </div>
+                    <div class="item">
+                        <i class="copy icon"></i>
+                        複製此出單機
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-bottom:40px"></div>
+        <div class="union">
+                <div class="ui left icon input loading">
+                        <input type="text" placeholder="Search...">
+                        <i class="search icon"></i>
+                      </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="title">櫃檯出單機
+        </div>
+        <div class="union">
+            <h4>結帳相關聯</h4>
+            <h4>顧客相關聯</h4>
+            <h4>廚房相關聯</h4>
+        </div>
+    </div>
+    <div class="column">
+        <div class="title">和牛區
+            <div class="ui dropdown">
+                <div class="text">File</div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <div class="item">
+                        <i class="plus square icon"></i>
+                        新增廚房聯規則
+                    </div>
+                    <div class="item">
+                        <i class="plus square icon"></i>
+                        新增標籤貼紙規則
+                    </div>
+                    <div class="item">
+                        <i class="plus square icon"></i>
+                        新增客戶聯規則
+                    </div>
+                    <div class="divider"></div>
+                    <div class="item">
+                        <i class="edit icon"></i>
+                        編輯出單名稱
+                    </div>
+                    <div class="item">
+                        <i class="copy icon"></i>
+                        複製此出單機
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="union">
+            <h4>基本設定</h4>
+            <h4>排列與切單</h4>
+            <h4>編輯列印品項</h4>
+        </div>
+    </div>
+</section>
+
+<footer></footer>
+  </body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/semantic.min.js"></script>
+
+<script>
+$('.ui.dropdown').dropdown({
+    'action': 'select',
+
+});
+</script>
+</html>

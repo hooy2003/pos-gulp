@@ -1,0 +1,59 @@
+nav {
+    background-color: $DarkGray;
+    display: flex;
+    &>a {
+        display: flex;
+        align-items: center;
+        &.logo {
+            color: $white;
+            padding-right: 30px;
+            border-right: 1px solid $lineWhite;
+        }
+        &.info {
+            color: $black;
+            padding-right: 30px;
+            padding-left: 30px;
+            border-left: 1px solid $lineWhite;
+        }
+        img {
+            display: inline-block;
+            width: 60px;
+            padding: 10px;
+        }
+        p {
+            font-weight: bold;
+            line-height: 1.25em;
+            color: $black;
+            display: inline-block;
+            span {
+                color: $lightWhite;
+            }
+        }
+    }
+    ul {
+        @include ul--style;
+        display: flex;
+        align-items: center;
+        flex: 1;
+        li {
+            cursor: pointer;
+            position: relative;
+            padding: 30px 15px;
+            color: $black;
+            &.active {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 10px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    display:inline-block;
+                    width: calc(100% - 30px);
+                    height: 1px;
+                    background-color: $black;
+                }
+            }
+        }
+    }    
+}

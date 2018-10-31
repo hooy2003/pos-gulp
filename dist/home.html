@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+<link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="./css/app.css">
+<!-- <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'> -->
+  </head>
+  <body>
+<nav id="nav">
+    <a class="logo">
+        <img src="../../img/cat.svg" alt="cat">
+        <p>System<br /><span>1.01v1</span></p>
+    </a>
+    <ul>
+        <li>食材管理</li>
+        <li>食譜管理</li>
+        <li>餐點管理</li>
+        <li>套餐管理</li>
+        <li><a href="store.html">店面管理</a></li>
+        <li>結帳管理</li>
+        <li>客戶資訊</li>
+        <li>系統設定</li>
+        <li>帳號與權限</li>
+        <li>Logout</li>
+    </ul>
+    <a class="info">
+        <p>{{userName}} 您好<br /><span>12:23PM</span></p>
+    </a>
+</nav>
+
+<section class="content">
+    <h1>Home, Welcome</h1>
+    <div class="ui text menu">
+            <div class="item">
+              <img src="/images/new-school.jpg">
+            </div>
+            <a class="browse item">
+              Browse Courses
+              <i class="dropdown icon"></i>
+            </a>
+            <div class="ui right dropdown item">
+              More
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="item">Applications</div>
+                <div class="item">International Students</div>
+                <div class="item">Scholarships</div>
+              </div>
+            </div>
+          </div>
+          <div class="ui flowing basic admission popup">
+            <div class="ui three column relaxed divided grid">
+              <div class="column">
+                <h4 class="ui header">Business</h4>
+                <div class="ui link list">
+                  <a class="item">Design &amp; Urban Ecologies</a>
+                  <a class="item">Fashion Design</a>
+                  <a class="item">Fine Art</a>
+                  <a class="item">Strategic Design</a>
+                </div>
+              </div>
+              <div class="column">
+                <h4 class="ui header">Liberal Arts</h4>
+                <div class="ui link list">
+                  <a class="item">Anthropology</a>
+                  <a class="item">Economics</a>
+                  <a class="item">Media Studies</a>
+                  <a class="item">Philosophy</a>
+                </div>
+              </div>
+              <div class="column">
+                <h4 class="ui header">Social Sciences</h4>
+                <div class="ui link list">
+                  <a class="item">Food Studies</a>
+                  <a class="item">Journalism</a>
+                  <a class="item">Non Profit Management</a>
+                </div>
+              </div>
+            </div>
+          </div>
+</section>
+
+<footer></footer>
+  </body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/semantic.min.js"></script>
+
+<script>
+$('.ui.dropdown').dropdown({
+    'action': 'select',
+
+});
+</script>
+</html>

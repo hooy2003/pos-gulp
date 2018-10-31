@@ -1,0 +1,295 @@
+/**
+ * ^nav ^lists
+ */
+.header {
+    // Desktop
+    .statusbar {
+        ul.social li {
+            @include member__dropdown;
+        }
+    }
+    // Mobile
+    nav {
+        .navGroup .navWrap ul.icon {
+            li.memberIcon {
+                display: block;
+                @include screen(lg) {
+                    display: none;
+                }
+            }            
+            .member__dropdown_btn {
+                width: 50px;
+                svg {
+                    width: 26px;
+                    height: 26px;
+                    .cls-1 {fill:#f0f0f0;}
+                    .cls-2 {fill:#969696;}
+                }
+                @include screen(sm) {
+                    display: none !important;
+                }
+            }
+            @include member__dropdown;
+
+        }
+    }
+}
+
+/**
+ * ^wrapper
+ */
+.login-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $blue;
+    min-height: 100%;
+    padding: 20px;
+}
+
+/**
+ * ^member ^login
+ */
+/*section*/.login {
+    align-items: center;
+    background-color: $white;
+    color: $black; 
+    width: 100%;
+    max-width: 450px;
+    padding: 30px 0 0 0;
+    border-radius: 10px 10px 10px 10px;
+    box-sizing: border-box;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+    margin: 0 auto;
+    z-index: 3;
+    &.display {
+        display: flex;
+    }
+    a.blue {
+      text-decoration: underline;
+    }
+    >div img {
+        width: 60%;
+    }
+    h1 {
+        text-align: center;
+        font-weight: 300;
+        font-size: 30px;
+        margin-bottom: 20px;
+        line-height: 30px;
+        letter-spacing: .1em;
+    }
+    ul.list {
+        list-style: none;
+        display: flex;
+        margin: 25px 0 30px 0;
+        li {
+            flex: 1;
+            font-weight: 900;
+            text-align: center;
+            &:first-child {
+                border-right: 1px #fff solid;
+            }
+        }
+        .bule {
+            color: $PantoneBlue;
+            font-weight: bold;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                width: 100%;
+                height: 1px;
+                background-color: $PantoneBlue;
+                bottom: -5px;
+                left: 0;
+            }
+        }
+    }
+    p.hr {
+        position: relative;
+        margin: 13px 0;
+        border: none;
+        color: $DarkGray;
+    }
+    p.singup_error {
+        color: #ff3964;
+        text-align: left;
+        display: none;
+        &.red {
+            display: block;
+        }
+    }
+    @include input__wrap;
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        @include member__input;
+    }
+
+    .form_buttonbar {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        margin-top: 30px;
+        p { 
+            flex: 1; color: $DarkGray; font-weight: 900;
+            &:nth-of-type(1) {
+                text-align: left;
+            }
+            &:nth-of-type(2) {
+                text-align: right;
+            }
+        }
+        button {
+            @include member__button;
+        }
+    }    
+    .formFooter {
+        background-color: $lightWhite;
+        border-top: 1px solid $lineWhite;
+        padding: 25px;
+        text-align: center;
+        border-radius: 0 0 10px 10px;
+        a {
+            color: #92badd;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+
+// reset and manger page
+main.mamager {
+    background-color: #f0f0f0;
+    padding: 30px 20px;
+    @include screen(sm) {
+        padding: 100px 0;
+    }
+}
+.profile_wrap {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 0;
+    border-radius: 50px;
+    box-sizing: border-box;
+    background-color: $Gray;
+    display: flex;
+    flex-wrap: wrap;
+    h3 {
+        font-size: 20px;
+        color: $DarkGray; 
+        text-align: center;
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
+    .form_wrap {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        flex-basis: 100%;
+        height: auto;
+        margin: 0 auto 40px auto;
+        color: $DarkGray;
+        @include screen(sm) {
+            flex-basis: 0;
+            flex:5;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .input__wrap {
+            width: 82%;
+            margin: 0 auto;            
+            text-align: left;
+            @include screen(sm) {
+                width: 60%;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: block;
+            width: 1px;
+            height: 100%;
+            background-color: #fff;
+        }
+        label {
+            font-weight: bold;
+            padding-bottom: 5px;
+            padding-left: 5px;
+            display: block;
+        }
+        input {
+            display: block;
+            width: 100%;
+            padding: 11px 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: $DarkGray;
+            border: none;
+            outline: none;
+        }
+        .input__wrap:last-child input {
+            margin-bottom: 0;
+        }
+        button {
+            @include member__button;
+            margin: 5px 0 0 0;
+        }
+    }
+    .profile_picture {
+        width: 100%;
+        text-align: center;
+        flex-basis: 100%;
+
+        @include screen(sm) {
+            flex-basis: 0;
+            flex:3;
+        }
+        img {
+            width: 120px;
+            height: 120px;
+            display: block;
+            margin: 0 auto 30px auto;
+            border-radius: 50%;
+        }
+        .button_wrap {
+            background-color: #f0f0f0;
+            width: 180px;            
+            height: 180px;
+            border-radius: 30px;
+            margin: 0 auto;
+            svg {
+                fill: $DarkGray;
+                width: 30px;
+                height: 30px;
+                margin-top: 50px;
+            }
+            button {
+                @include member__button;
+                display: block;
+                height: 30px;
+                width: 100px;
+                border-radius: 20px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+

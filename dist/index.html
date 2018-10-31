@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+<link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="./css/app.css">
+<!-- <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'> -->
+  </head>
+  <body>
+
+<div class="login-wrapper">
+    <section class="login fadeInDown">
+      <div class="fadeIn first">
+          <img src="./img/login.svg" id="icon" alt="User Icon" />
+      </div>
+      <form novalidate="true">
+        <div class="input__wrap">
+          <input type="text"
+                placeholder="userName"
+                class="fadeIn second"
+                >
+        </div>
+        <div class="input__wrap">
+          <!-- <label>Password</label> -->
+          <input type="password"                
+                placeholder="passWord"
+                class="fadeIn third"
+                >
+        </div>
+        <div class="form_buttonbar">
+          <button type="submit"
+                  class="primary fadeIn fourth"
+                  >Log In</button>
+        </div>
+        <div class="formFooter">
+          <a class="underlineHover">Forgot Password?</a>
+        </div>
+      </form>
+    </section>
+</div>
+
+  </body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/semantic.min.js"></script>
+
+<script>
+$('.ui.dropdown').dropdown({
+    'action': 'select',
+
+});
+</script>
+</html>

@@ -1,0 +1,36 @@
+
+<!-- @@master  = ../layout/layout2.html-->
+
+<!-- @@block  =  content-->
+<section class="content">
+    <h1>UserInfo</h1>
+    <form novalidate="true">
+        <div class="input__wrap">
+        <label>聯絡E-mail</label>
+        <input type="email"
+                class=""
+                placeholder="聯絡E-mail">
+        <p class="input__status--error js__input__status--error">email.errorMsg</p>
+        </div>
+        <div class="input__wrap">
+        <label>名字</label>
+        <input type="text"
+                class=""
+                placeholder="名字">
+        <p class="input__status--error js__input__status--error">name.errorMsg</p>
+        </div>
+        <div class="input__wrap">
+        <label>電話號碼</label>
+        <input type="phone"
+                class=""
+                placeholder="電話號碼">
+        <p class="input__status--error js__input__status--error">phone.errorMsg</p>
+        </div>
+        <div class="form_buttonbar">
+        <button type="submit"
+                class="primary"
+                >Change</button>
+        </div>
+    </form>
+</section>
+<!-- @@close-->

@@ -1,0 +1,32 @@
+/*section*/.content {
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    .column {
+        height: 100vh;   // 是否改為 flex格局？
+        overflow: auto; // 是否改為 flex格局？
+        border-right: 1px $black solid;
+        background-color: $lightWhite;
+        &:last-child {
+            border-right: 0;
+        }
+        .title {
+            text-align: center;
+            padding: 15px;
+            background-color: $Gray;
+            border-bottom: 1px $black solid;
+        }
+        .ivu-dropdown {
+            position: absolute;
+            right: 20px;
+        }
+        .union {
+           h4 {
+            padding: 10px;
+           }
+           .setting {
+               p { display: inline-block; }
+           }
+        }
+    }
+}

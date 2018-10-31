@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+<link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="./css/app.css">
+<!-- <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'> -->
+  </head>
+  <body>
+<nav id="nav">
+    <a class="logo">
+        <img src="../../img/cat.svg" alt="cat">
+        <p>System<br /><span>1.01v1</span></p>
+    </a>
+    <ul>
+        <li>食材管理</li>
+        <li>食譜管理</li>
+        <li>餐點管理</li>
+        <li>套餐管理</li>
+        <li><a href="store.html">店面管理</a></li>
+        <li>結帳管理</li>
+        <li>客戶資訊</li>
+        <li>系統設定</li>
+        <li>帳號與權限</li>
+        <li>Logout</li>
+    </ul>
+    <a class="info">
+        <p>{{userName}} 您好<br /><span>12:23PM</span></p>
+    </a>
+</nav>
+
+<section class="content">
+    <h1>UserInfo</h1>
+    <form novalidate="true">
+        <div class="input__wrap">
+        <label>聯絡E-mail</label>
+        <input type="email"
+                class=""
+                placeholder="聯絡E-mail">
+        <p class="input__status--error js__input__status--error">email.errorMsg</p>
+        </div>
+        <div class="input__wrap">
+        <label>名字</label>
+        <input type="text"
+                class=""
+                placeholder="名字">
+        <p class="input__status--error js__input__status--error">name.errorMsg</p>
+        </div>
+        <div class="input__wrap">
+        <label>電話號碼</label>
+        <input type="phone"
+                class=""
+                placeholder="電話號碼">
+        <p class="input__status--error js__input__status--error">phone.errorMsg</p>
+        </div>
+        <div class="form_buttonbar">
+        <button type="submit"
+                class="primary"
+                >Change</button>
+        </div>
+    </form>
+</section>
+
+<footer></footer>
+  </body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/semantic.min.js"></script>
+
+<script>
+$('.ui.dropdown').dropdown({
+    'action': 'select',
+
+});
+</script>
+</html>
